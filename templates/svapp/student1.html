@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student Assessment Portal</title>
+  <link rel="icon" href="{% static "images/svce2.png" %}" type="image/png">
+
+  <link rel="stylesheet" href="{% static "vendors/bootstrap/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/fontawesome/css/all.min.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/themify-icons/themify-icons.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/linericon/style.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/owl-carousel/owl.theme.default.min.css" %}">
+  <link rel="stylesheet" href="{% static "vendors/owl-carousel/owl.carousel.min.css" %}">
+
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<body>
+  <!--================Header Menu Area =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand" href="/index" ><h3 style="color:white;" ><img src="{% static "images/svce3.png" %}" > Student Assessment Portal</h3></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+
+            <ul class="nav navbar-nav menu_nav justify-content-end">
+              <li class="nav-item active"><a class="nav-link" href="/index">Home</a></li>
+              <li class="nav-item active"><a class="nav-link" href="/student">Student</a></li>
+              <li class="nav-item active"><a class="nav-link" href="/quiz_list">Write Exam</a></li>
+              <li class="nav-item submenu dropdown active">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Profile</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="/taken">Results View</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/interests">Subjects View</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/ups/{{user.id}}">Profile Edit</a></li>
+                </ul>
+							</li>
+              <li class="nav-item active"><a class="nav-link" href="/logout">Logout</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->
+
+  <!--================ Hero sm Banner start =================-->
+  <section class="hero-banner hero-banner--sm mb-30px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="hero-banner__img">
+            <img class="img-fluid" src="{% static "images/banner/s4.png" %}" style="height:340px; width:80%; margin-left:30px; margin-top:110px;" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 pt-5">
+          <div class="hero-banner__content">
+            <p style="font-size:28px; padding-top:130px;">Designing Question Paper & Student Assessment Portal</p>
+            <p style="font-size:15px;">"Nothing is impossible, The word itself says I'm Possible... So All The Best."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--================ Hero sm Banner end =================-->
+  {% block body_block %}
+
+
+  {% endblock %}
+
+  
+
+  <script src="{% static "vendors/jquery/jquery-3.2.1.min.js" %}"></script>
+  <script src="{% static "vendors/bootstrap/bootstrap.bundle.min.js"  %}"></script>
+  <script src="{% static "vendors/owl-carousel/owl.carousel.min.js"  %}"></script>
+  <script src="{% static "js/jquery.ajaxchimp.min.js"  %}"></script>
+  <script src="{% static "js/mail-script.js"  %}"></script>
+  <script src="{% static "js/main.js"  %}"></script>
+</body>
+</html>
